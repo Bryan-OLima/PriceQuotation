@@ -12,17 +12,17 @@
 
     <form class="liquid-glass">
         <label for="filament">Quantidade de Filamento</label>
-        <input type="number" name="filament" id="filament" placeholder="Digite em gramas" class="liquid" autofocus>
+        <input type="number" name="filament" id="filament" placeholder="Digite em gramas" class="liquid" min="0.1" step="0.01" required>
 
         <label for="hours">Quantidade de Horas</label>
-        <input type="number"placeholder="Ex: 10" name="hours" id="hours">
+        <input type="number"placeholder="Ex: 10" name="hours" id="hours" min="0.1" step="0.01" required>
 
         <label for="workedHours">Horas de Trabalho Manual</label>
-        <input type="number" placeholder="Ex: 1" name="workedHours" id="workedHours">
+        <input type="number" placeholder="Ex: 1" name="workedHours" id="workedHours" min="0.1" step="0.01" required>
 
        <div class="checkbox-spacer" >
             <label for="isNoProfit">Calcular sem lucro?</label>
-            <input type="checkbox" name="isNoProfit" id="isNoProfit">
+            <input type="checkbox" name="isNoProfit" id="isNoProfit" required>
        </div>
 
         
