@@ -1,11 +1,13 @@
 import LocalStorageService from './services/localStorageService.js';
 import PriceQuotation from './dtos/priceQuotation.js';
+import LoadModule from './modules/loadModule.js';
 
 const form = document.querySelector("form");
+const history = document.querySelector(".history");
 
 const data = LocalStorageService();
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
     
     const formData = new FormData(form);
@@ -18,8 +20,8 @@ form.addEventListener("submit", (e) => {
 
     const priceQuotation = new PriceQuotation(filament, hours, workedHours, isNoProfit, timeStamp);
 
-    console.log(isNoProfit);
-    console.log(Object.fromEntries(formData), ",", priceQuotation)
-});
+    data.set(priceQuotation);
 
-console.log('aaaa',data.getAll());
+    const test = await LoadModule("historyModue");
+    history.innerHTML = test;
+});
