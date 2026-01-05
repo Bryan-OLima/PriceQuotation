@@ -21,7 +21,16 @@ form.addEventListener("submit", async (e) => {
     const priceQuotation = new PriceQuotation(filament, hours, workedHours, isNoProfit, timeStamp);
 
     data.set(priceQuotation);
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Cotação salva com sucesso!",
+        showConfirmButton: false,
+        timer: 1500
+    });
 
-    const test = await LoadModule("historyModue");
+    form.reset();
+
+    const test = await LoadModule("historyModule");
     history.innerHTML = test;
 });
