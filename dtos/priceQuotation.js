@@ -4,6 +4,7 @@ export default class PriceQuotation {
         this.machineDepreciation = machineDepreciation;
         this.filament = filament;
         this.hour = hour;
+        this.isNoProfit = false;
         this.timeStamp = new Date().now;
 
         const calculate = () => {
