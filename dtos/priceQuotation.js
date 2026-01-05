@@ -1,12 +1,15 @@
 export default class PriceQuotation {
-    constructor(machineDepreciation, filament, hour){
-        this.id = `priceQuotation_${this.timeStamp}`;
-        this.machineDepreciation = machineDepreciation;
+    constructor(filament, hours, workedHours, isNoProfit, timeStamp){
+        this.id = `priceQuotation_${timeStamp}`;
         this.filament = filament;
-        this.hour = hour;
-        this.isNoProfit = false;
-        this.timeStamp = new Date().now;
+        this.hours = hours;
+        this.workedHours = workedHours;
+        this.isNoProfit = isNoProfit;
+        this.timeStamp = timeStamp;
 
+        
+        this.machineDepreciation = '';
+        
         const calculate = () => {
             let res = [];
 
