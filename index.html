@@ -12,7 +12,13 @@
     <h1>Cotação de Preço</h1>
 
     <form class="liquid-glass">
-        <label for="filament">Quantidade de Filamento</label>
+        <label for="name">Nome do Cliente</label>
+        <input type="text" name="name" id="name" placeholder="Ex JOAO" class="liquid" required>
+
+        <label for="phone">Telefone</label>
+        <input type="text" name="phone" id="phone" placeholder="(17) 997256516" class="liquid" required>
+
+        <label for="filament">Quantidade de Filamento(g)</label>
         <input type="number" name="filament" id="filament" placeholder="Digite em gramas" class="liquid" min="0.1" step="0.01" required>
 
         <label for="hours">Quantidade de Horas</label>
@@ -30,10 +36,15 @@
         <button type="submit" class="button-send">Calcular Cotação</button>
     </form>
 
-    <div class="history">
 
+         
+    <div class="history">
+        <button type="button" class="button-history" style="width: 400px;">Abrir histórico</button>
     </div>
 
+<!-- Contador -->
+<div class="hide" align="center"><a title="contador de dias" href="https://www.calendario.cnt.br/ferramentas/contador-de-dias-calculadora-prazo-entre-datas"><img src="https://contador-gratis.com/contadores-de-visitas/050126084327368.gif"></a><div><a href="https://www.contador-gratis.com/" title="contador de visitas">Contador de Visitas</a></div></div>
+<!-- Fim do codigo Contador -->
     <script type="module" src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
