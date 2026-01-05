@@ -1,5 +1,4 @@
-export default function LocalStorageService(priceQuotation) {
-    console.log("local storage controller");
+export default function LocalStorageService() {
     return {
         set: (priceQuotation) => {
             localStorage.setItem(priceQuotation.id, JSON.stringify(priceQuotation));
