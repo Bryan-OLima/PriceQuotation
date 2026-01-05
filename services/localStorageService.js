@@ -28,5 +28,5 @@ export default function LocalStorageService() {
             }
             return db;
         }
-    };
+    }
 }
