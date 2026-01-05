@@ -16,13 +16,15 @@ export default function LocalStorageService() {
 
             for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
+
                 if(key.startsWith("priceQuotation_")){
                     const value = localStorage.getItem(key);
 
                     try {
-                        db[key] = JSON.parse(value);
+                        const data= JSON.parse(value);
+                        db.push(data);
                     } catch {
-                        db[key] = value;
+                        db.push(value);
                     }
                 }   
             }
