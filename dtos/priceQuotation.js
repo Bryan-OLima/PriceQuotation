@@ -1,25 +1,28 @@
 export default class PriceQuotation {
-    constructor(filament, hours, workedHours, isNoProfit, timeStamp){
+    constructor(name, phone, filament, hours, workedHours, isNoProfit, timeStamp){
         this.id = `priceQuotation_${timeStamp}`;
+        this.name = name;
+        this.phone = phone;
         this.filament = filament;
         this.hours = hours;
         this.workedHours = workedHours;
         this.isNoProfit = isNoProfit;
         this.timeStamp = timeStamp;
 
-        
-        this.machineDepreciation = '';
-        
-        const calculate = () => {
-            let res = [];
+        const results = this._calculate();
+        this.value = results.cost;
+        this.valueProfit = results.sell;
+    }
 
-            res.push({resWithProfit: 1});
+    _calculate() {
+        const base = ((0.3 * this.hours) + (0.15 * this.filament) + (0.33 * this.hours)) * 0.05 + (7 * this.workedHours);
 
-            if(isNoProfit){
-                res.push({resWithNoProfit: 2});
-            }
+        const total = this.isNoProfit ? base : base * 2;
 
-            return res;
+        return {
+            cost: base.toFixed(2),
+            sell: total.toFixed(2)
         }
     }
+
 }
