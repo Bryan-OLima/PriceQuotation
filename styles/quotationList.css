@@ -1,0 +1,58 @@
+#lista-cotacoes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px; 
+    overflow-y: auto;  
+    padding-right: 8px;
+}
+
+#lista-cotacoes::-webkit-scrollbar {
+    width: 4px;
+}
+#lista-cotacoes::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.item-quotation {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.item-quotation:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(5px); 
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item-name {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.item-details {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.item-price {
+    display: inline-block; 
+    white-space: nowrap;   
+    color: #00ff88;
+    font-weight: bold;
+    flex-shrink: 0;       
+}

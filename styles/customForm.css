@@ -29,7 +29,8 @@ input::placeholder{
     opacity: 65%;
 }
 
-input[type="number"] {
+input[type="number"],
+input[type="text"] {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
@@ -40,12 +41,12 @@ input[type="number"] {
     transition: all 0.3s ease;
 }
 
-input[type="number"]:focus {
+input[type="number"]:focus, 
+input[type="text"]:focus {
     background: rgba(255, 255, 255, 0.2);
     border-color: #fff;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
-
 
 .checkbox-group {
     display: flex;
