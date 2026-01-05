@@ -1,0 +1,30 @@
+@import "./styles/customForm.css";
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+h1 {
+    font-weight: 200;          
+    font-size: 2.5rem;          
+    letter-spacing: -1px;       
+    margin-bottom: 30px;        
+    text-align: center;
+    
+    /* Liquid Glass Effect */
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Modern Text Color Effect */
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
