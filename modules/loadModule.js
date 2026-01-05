@@ -1,19 +1,19 @@
-export default async function LoadModule(item) {
-    try {
-        const res = await fetch(`./modules/${item}.html`);
-        if(!res.ok) throw new Error("Error: module is not loading");
+// export default async function LoadModule(url) {
+//     try {
+//         const res = await fetch(url);
+//         if(!res.ok) throw new Error("Error: module is not loading");
 
-        return await res.text();
-    } 
-    catch(err) {
-        console.warn("Page error dont working properly, trying redirecting to 'error.html' page");
+//         return await res.text();
+//     } 
+//     catch(err) {
+//         console.warn("Page error dont working properly, trying redirecting to 'error.html' page");
 
-        try {
-            const resError = await fetch(`./modules/error.html`);
-            return await resError.text();
-        } 
-        catch {
-            return "<h3> ERRO CRITICO! Modulo não carregará. Entre em contato com os desenvolvedores</h3>";
-        }
-    }
-} 
+//         try {
+//             const resError = await fetch(`./modules/error.html`);
+//             return await resError.text();
+//         } 
+//         catch {
+//             return "<h3> ERRO CRITICO! Modulo não carregará. Entre em contato com os desenvolvedores</h3>";
+//         }
+//     }
+// } 
