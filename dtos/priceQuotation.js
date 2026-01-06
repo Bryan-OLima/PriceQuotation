@@ -1,12 +1,11 @@
 export default class PriceQuotation {
-    constructor(name, phone, filament, hours, workedHours, isNoProfit, timeStamp){
+    constructor(name, phone, filament, hours, workedHours, timeStamp){
         this.id = `priceQuotation_${timeStamp}`;
         this.name = name;
         this.phone = phone;
         this.filament = filament;
         this.hours = hours;
         this.workedHours = workedHours;
-        this.isNoProfit = isNoProfit;
         this.timeStamp = timeStamp;
 
         const results = this._calculate();

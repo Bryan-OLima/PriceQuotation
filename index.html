@@ -15,6 +15,9 @@
         <label for="name">Nome do Cliente</label>
         <input type="text" name="name" id="name" placeholder="Ex JOAO" class="liquid" required>
 
+        <label for="product">Produto</label>
+        <input type="text" name="product" id="product" placeholder="Ex Batman 30cm" class="liquid" required>
+
         <label for="phone">Telefone</label>
         <input type="text" name="phone" id="phone" placeholder="(17) 997256516" class="liquid" required>
 
@@ -27,12 +30,6 @@
         <label for="workedHours">Horas de Trabalho Manual</label>
         <input type="number" placeholder="Ex: 1" name="workedHours" id="workedHours" min="0.1" step="0.01" required>
 
-       <div class="checkbox-spacer" >
-            <label for="isNoProfit">Calcular sem lucro?</label>
-            <input type="checkbox" name="isNoProfit" id="isNoProfit">
-       </div>
-
-        
         <button type="submit" class="button-send">Calcular Cotação</button>
     </form>
 

@@ -22,9 +22,8 @@ form.addEventListener("submit", async (e) => {
     const hours = parseFloat(formData.get("hours"));
     const workedHours = parseFloat(formData.get("workedHours"));
     const timeStamp = Date.now();
-    const isNoProfit = formData.get("isNoProfit") === "on";
 
-    const priceQuotation = new PriceQuotation(name, phone, filament, hours, workedHours, isNoProfit, timeStamp);
+    const priceQuotation = new PriceQuotation(name, phone, filament, hours, workedHours, timeStamp);
 
     console.log(name);
     data.set(priceQuotation);
@@ -58,7 +57,7 @@ history.addEventListener('click', async(e) => {
                     <div class="item-info">
                         <span class="item-name">${item.name || 'Cliente Sem Nome'}</span>
                         <span class="item-details">
-                            item place holder • ${item.filament}g • ${item.isNoProfit? 'sem lucro': `Custo R$ ${item.valueProfit}`}
+                            item place holder • ${item.filament}g • ${item.value}
                         </span>
                         <span class="item-details">
                             ${item.phone} - ${new Date(item.timeStamp).toLocaleTimeString()}
