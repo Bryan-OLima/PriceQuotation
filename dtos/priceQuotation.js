@@ -14,9 +14,9 @@ export default class PriceQuotation {
     }
 
     _calculate() {
-        const base = ((0.3 * this.hours) + (0.15 * this.filament) + (0.33 * this.hours)) * 0.05 + (7 * this.workedHours);
+        const base = (0.3 * this.hours) + (0.15 * this.filament) + (0.33 * this.hours) + (7 * this.workedHours);
 
-        const total = this.isNoProfit ? base : base * 2;
+        const total = base * 2;
 
         return {
             cost: base.toFixed(2),
